@@ -1,0 +1,16 @@
+server:
+  servlet:
+    path: /boot
+
+person:
+  name: 小明
+  pwd: 123
+  age: 18
+  maps:
+    k1: v1
+    mapName: mapValue
+  lists:
+    - cat
+    - dog
+  dog:
+    name: 金毛
