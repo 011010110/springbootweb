@@ -1,4 +1,4 @@
-package org.jiang.config;
+package org.jiang.demo.domain;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

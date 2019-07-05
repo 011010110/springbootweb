@@ -104,10 +104,26 @@
 			<p><span>人生就是一场修行</span></p>
 		</div>
 	<script src="../layui/layui.js"></script>
+	<script src="../websocket/sockjs.js"></script>
+	<script src="../websocket/stomp.js"></script>
 	<script>
 		layui.config({
 		  base: '../demo/js/'
-		}).use('blog');	
+		}).use('blog');
+
+		var url = "http://localhost:8081/webSocketEndpoint";
+		var sockJS = new SockJS(url);
+		var stompClient = Stomp.over(sockJS);
+		stompClient.connect({},function(frame){
+            console.log("connected");
+		    console.log(frame);
+		    stompClient.send("/app/test",null,"test_send");
+            /*stompClient.subscribe("/app/subscribeTest",function(result){
+                console.log("subscribe");
+                console.log(result);
+			},"");*/
+		});
+
 	</script>
 </body>
 </html>

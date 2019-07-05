@@ -1,4 +1,4 @@
-package org.jiang.config;
+package org.jiang.demo.domain;
 
 /**
  * @author 12572
